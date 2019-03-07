@@ -31,38 +31,44 @@ public class Matrice {
     }
 
     public int verificationVictoire(Joueur joueur){
+        int compteuregalite = 0;
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 if (tableau[i][0].getTag() == joueur.getPseudo() &&
                        tableau[i][1].getTag() == joueur.getPseudo() && tableau[i][2].getTag() == joueur.getPseudo()){
                     estFinie = true;
-                    forme = joueur.getForme();
+                    forme = joueur.getFormeTrans();
                     return 1;
                 }
-                    if(tableau[0][i].getTag() == joueur.getPseudo() &&
+                if(tableau[0][i].getTag() == joueur.getPseudo() &&
                             tableau[1][i].getTag() == joueur.getPseudo() && tableau[2][i].getTag() == joueur.getPseudo())
                 {
                     estFinie = true;
-                    forme = joueur.getForme();
+                    forme = joueur.getFormeTrans();
                     return 1;
                 }
 
                 if(tableau[0][0].getTag() == joueur.getPseudo() &&
                         tableau[1][1].getTag() == joueur.getPseudo() && tableau[2][2].getTag() == joueur.getPseudo()) {
                     estFinie = true;
-                    forme = joueur.getForme();
+                    forme = joueur.getFormeTrans();
                     return 1;
                 }
-                    if(tableau[2][0].getTag() == joueur.getPseudo() &&
+                if(tableau[2][0].getTag() == joueur.getPseudo() &&
                             tableau[1][1].getTag() == joueur.getPseudo() && tableau[0][2].getTag() == joueur.getPseudo()){
                         estFinie = true;
-                        forme = joueur.getForme();
+                        forme = joueur.getFormeTrans();
                         return 1;
                 }
-
+                if(tableau[i][j].getTag() != null){
+                    compteuregalite++;
                 }
-
-
+            }
+        }
+        if(compteuregalite == 9){
+            this.estFinie = true;
+            this.forme = R.drawable.egalite;
+            return 1;
         }
         return 0;
     }

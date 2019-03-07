@@ -15,7 +15,7 @@ public class Musique{
 
     public Musique(Context context){
         mediaPlayer = MediaPlayer.create(context, R.raw.musique);
-
+        mediaPlayer.setLooping(true);
     }
 
     public void jouerMusique(){

@@ -229,56 +229,73 @@ public class MainActivity extends AppCompatActivity {
     private Matrice verificationVictoire(Matrice a){
 
         if (a.verificationVictoire(joueurActuel) == 1) {
-            a.getImage().setBackgroundResource(joueurActuel.getFormeTrans());
+            a.getImage().setBackgroundResource(a.getForme());
             a.getImage().setVisibility(View.VISIBLE);
         }
         return a;
     }
 
     public int verificationVictoirePartie(){
+        int compteuregalite = 0;
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                if (tableauMatrice[i][0].getForme() == joueurActuel.getForme() &&
-                        tableauMatrice[i][1].getForme() == joueurActuel.getForme() && tableauMatrice[i][2].getForme() == joueurActuel.getForme()){
-                    finPartieVictoire();
+                if (tableauMatrice[i][0].getForme() == joueurActuel.getFormeTrans() &&
+                        tableauMatrice[i][1].getForme() == joueurActuel.getFormeTrans() && tableauMatrice[i][2].getForme() == joueurActuel.getFormeTrans()){
+                    finPartieVictoire(1);
                     return 1;
                 }
-                if(tableauMatrice[0][i].getForme() == joueurActuel.getForme() &&
-                        tableauMatrice[1][i].getForme() == joueurActuel.getForme() && tableauMatrice[2][i].getForme() == joueurActuel.getForme()){
-                    finPartieVictoire();
+                if(tableauMatrice[0][i].getForme() == joueurActuel.getFormeTrans() &&
+                        tableauMatrice[1][i].getForme() == joueurActuel.getFormeTrans() && tableauMatrice[2][i].getForme() == joueurActuel.getFormeTrans()){
+                    finPartieVictoire(1);
                     return 1;
                 }
 
-                if(tableauMatrice[0][0].getForme() == joueurActuel.getForme() &&
-                        tableauMatrice[1][1].getForme() == joueurActuel.getForme() && tableauMatrice[2][2].getForme() == joueurActuel.getForme()) {
-                    finPartieVictoire();
+                if(tableauMatrice[0][0].getForme() == joueurActuel.getFormeTrans() &&
+                        tableauMatrice[1][1].getForme() == joueurActuel.getFormeTrans() && tableauMatrice[2][2].getForme() == joueurActuel.getFormeTrans()) {
+                    finPartieVictoire(1);
                     return 1;
                 }
-                if(tableauMatrice[2][0].getForme() == joueurActuel.getForme() &&
-                        tableauMatrice[1][1].getForme() == joueurActuel.getForme() && tableauMatrice[0][2].getForme() == joueurActuel.getForme()){
-                    finPartieVictoire();
+                if(tableauMatrice[2][0].getForme() == joueurActuel.getFormeTrans() &&
+                        tableauMatrice[1][1].getForme() == joueurActuel.getFormeTrans() && tableauMatrice[0][2].getForme() == joueurActuel.getFormeTrans()){
+                    finPartieVictoire(1);
                     return 1;
+                }
+                if(tableauMatrice[i][j].getForme() != 0){
+                    compteuregalite++;
                 }
             }
+        }
+        if(compteuregalite == 9){
+            finPartieVictoire(0);
+            return 1;
         }
         return 0;
     }
 
-    private void finPartieVictoire() {
-        android.app.AlertDialog finPartie = new android.app.AlertDialog.Builder(this).create();
-
-        finPartie.setButton(DialogInterface.BUTTON_POSITIVE, "oui", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-
-            }
-        });
-        finPartie.setTitle("Victoire !!");
-        finPartie.setIcon(joueurActuel.getForme());
+    private void finPartieVictoire(int typeFin) {
+        if(typeFin == 1){
+            android.app.AlertDialog finPartie = new android.app.AlertDialog.Builder(this).create();
+            finPartie.setButton(DialogInterface.BUTTON_POSITIVE, "oui", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+                }
+            });
+            finPartie.setTitle("Victoire !!");
+            finPartie.setIcon(joueurActuel.getFormeTrans());
             changerJoueur();
-        finPartie.setMessage(joueurActuel.getPseudo() + " a gagné !!");
+            finPartie.setMessage(joueurActuel.getPseudo() + " a gagné !!");
+            finPartie.show();
+        }else if(typeFin == 0){
+            android.app.AlertDialog finPartie = new android.app.AlertDialog.Builder(this).create();
+            finPartie.setButton(DialogInterface.BUTTON_POSITIVE, "oui", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+                }
+            });
+            finPartie.setTitle("Égalité !!");
+            finPartie.setIcon(R.drawable.egalite);
+            changerJoueur();
+            finPartie.show();
+        }
 
-
-        finPartie.show();
     }
 
 
