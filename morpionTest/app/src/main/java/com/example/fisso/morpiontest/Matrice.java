@@ -1,14 +1,9 @@
 package com.example.fisso.morpiontest;
-
-import android.content.Context;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
-/**
- * Created by fisso on 24/01/2019.
- */
+
 
 public class Matrice {
 
