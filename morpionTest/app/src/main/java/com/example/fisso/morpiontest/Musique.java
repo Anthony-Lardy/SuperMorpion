@@ -4,9 +4,6 @@ import android.content.Context;
 import android.media.MediaPlayer;
 
 
-/**
- * Created by fisso on 02/03/2019.
- */
 
 public class Musique{
 

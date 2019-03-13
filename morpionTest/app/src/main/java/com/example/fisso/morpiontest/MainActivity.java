@@ -1,6 +1,7 @@
 package com.example.fisso.morpiontest;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -33,15 +34,52 @@ public class MainActivity extends AppCompatActivity {
     private Matrice [][] tableauMatrice = { {m1, m2, m3}, {m4, m5, m6},{ m7, m8, m9} };
     private List<Matrice> listeToutesMatrices = new ArrayList<Matrice>();
     private Musique musique;
-    ImageView [][] tableauImage = { {i1, i2, i3}, {i4, i5, i6},{ i7, i8, i9} };
-
+    private ImageView [][] tableauImage = { {i1, i2, i3}, {i4, i5, i6},{ i7, i8, i9} };
+    private ImageButton parametres;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         fenetre = (RelativeLayout) findViewById(R.id.fenetre);
+        parametres = (ImageButton) findViewById(R.id.parametres);
 
+        parametres.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                quitter();
+            }
+        });
+    }
+
+
+
+    public void quitter(){
+        //on ouvre une boite de dialogue pour vérifier si l'utilisateur veut quitter
+        android.app.AlertDialog accueil = new android.app.AlertDialog.Builder(this).create();
+        accueil.setTitle("Retour à l'accueil");
+        accueil.setButton(DialogInterface.BUTTON_POSITIVE, "oui", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                ouvrirAccueilActivity();
+            }
+        });
+        //sinon on reste sur le jeu
+        accueil.setButton(DialogInterface.BUTTON_NEGATIVE, "non", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
+
+        accueil.setMessage("Voulez-vous retourner à l'accueil ?");
+        accueil.setIcon(R.drawable.parametre);
+        accueil.show();
+
+    }
+
+
+    public void ouvrirAccueilActivity(){
+        Intent intent = new Intent(this, Accueil.class);
+        startActivity(intent);
     }
 
     private void afficherGrille(Matrice[][] listeMatrice){
@@ -68,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void afficherGrandeGrille(){
         float xDepart = width/22;
-        float yDepart = height/3;
+        float yDepart = height/3 + (width/22);
 
         for (int i=0;i<3;i++) {
 
@@ -78,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
 
             for (int j = 0; j < 3; j++) {
                 //taille des imageButtons
-                ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(6*(width / 22), 8*(width / 22));
+                ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(6*(width / 22), 6*(width / 22));
                 tableauImage[i][j] = new ImageButton(this);
                 tableauImage[i][j].setLayoutParams(params);
                 tableauImage[i][j].setVisibility(View.GONE);
