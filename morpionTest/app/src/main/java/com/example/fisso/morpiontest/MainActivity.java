@@ -81,7 +81,6 @@ public class MainActivity extends AppCompatActivity {
                 ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(6*(width / 22), 8*(width / 22));
                 tableauImage[i][j] = new ImageButton(this);
                 tableauImage[i][j].setLayoutParams(params);
-                tableauImage[i][j].setBackgroundResource(R.drawable.croix_transp);
                 tableauImage[i][j].setVisibility(View.GONE);
 
                 tableauImage[i][j].setX(xDepart);
@@ -173,7 +172,7 @@ public class MainActivity extends AppCompatActivity {
             pseudo1 = (TextView) findViewById(R.id.pseudo1);
             pseudo2 = (TextView) findViewById(R.id.pseudo2);
             jouerTourImage = (ImageView) findViewById(R.id.tourJouerImage);
-            jouerTourImage.setBackgroundResource(joueurActuel.getForme());
+            jouerTourImage.setBackgroundResource(joueurActuel.getFormeTrans());
             jouerTourTexte.setText("C'est au tour de "+ joueurActuel.getPseudo() + " de jouer");
             pseudo1.setText(j1.getPseudo());
             pseudo2.setText(j2.getPseudo());
@@ -192,7 +191,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
         jouerTourTexte.setText("C'est au tour de "+ joueurActuel.getPseudo() + " de jouer");
-        jouerTourImage.setBackgroundResource(joueurActuel.getForme());
+        jouerTourImage.setBackgroundResource(joueurActuel.getFormeTrans());
     }
 
     public void jouerUnePartie(){
