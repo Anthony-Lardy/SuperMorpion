@@ -19,7 +19,6 @@ public class Accueil extends AppCompatActivity {
     Button jouer;
     Button regles;
     Button credits;
-    Activity a = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

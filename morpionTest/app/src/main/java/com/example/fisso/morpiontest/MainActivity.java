@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
     ImageView [][] tableauImage = { {i1, i2, i3}, {i4, i5, i6},{ i7, i8, i9} };
     private Button rejouer;
     private ImageButton parametres;
-    private Activity a = this;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -306,7 +306,7 @@ public class MainActivity extends AppCompatActivity {
             finPartie.setIcon(joueurActuel.getFormeTrans());
             finPartie.setMessage(joueurActuel.getPseudo() + " a gagné !!");
 
-            new ParticleSystem(a, 1000, getDrawable(R.drawable.confetti), 1000)
+            new ParticleSystem(this, 1000, getDrawable(R.drawable.confetti), 1000)
                     .setSpeedRange(0.2f, 0.5f)
                     .oneShot(findViewById(R.id.fenetre), 100);
         }else if(typeFin == 0){
