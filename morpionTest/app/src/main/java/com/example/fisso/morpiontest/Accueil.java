@@ -19,7 +19,6 @@ public class Accueil extends AppCompatActivity {
     Button jouer;
     Button regles;
     Button credits;
-    Activity a = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,9 +41,6 @@ public class Accueil extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //on fait appel à la méthode ouvrirMainActivity
-                new ParticleSystem(a, 1000, getDrawable(R.drawable.confetti), 1000)
-                        .setSpeedRange(0.2f, 0.5f)
-                        .oneShot(view, 100);
                 ouvrirParametresActivity();
             }
         });
