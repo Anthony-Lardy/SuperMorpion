@@ -49,7 +49,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text=""
+        android:maxLength="15"
         android:ems="10"
         android:id="@+id/joueur2Pseudo"
         android:layout_below="@+id/pseudo2"
@@ -59,49 +59,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text=""
+        android:maxLength="15"
         android:ems="10"
         android:id="@+id/joueur1Pseudo"
         android:layout_below="@+id/pseudo1"
         android:layout_alignStart="@+id/pseudo1" />
 
-    <RadioGroup
-        android:orientation="horizontal"
-        android:layout_width="500dp"
-        android:layout_height="100dp"
-        android:checkedButton="@+id/radioButton"
-        android:layout_above="@+id/Valider"
-        android:layout_alignStart="@+id/joueur2Pseudo">
-
-        <TextView
-            android:text="Type de partie :"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView8"
-            android:layout_below="@+id/joueur2Pseudo"
-            android:layout_alignStart="@+id/joueur2Pseudo"
-            android:layout_weight="1" />
-
-        <RadioButton
-            android:text="Joueur vs joueur"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/radioButton"
-            android:layout_marginBottom="20dp"
-            android:layout_above="@+id/Valider"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="23dp"
-            android:layout_weight="1" />
-
-        <RadioButton
-            android:text="Joueur vs IA"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/radioButton2"
-            android:layout_alignBaseline="@+id/radioButton"
-            android:layout_alignBottom="@+id/radioButton"
-            android:layout_alignEnd="@+id/parametresTitre"
-            android:layout_weight="1" />
-    </RadioGroup>
 
 </RelativeLayout>

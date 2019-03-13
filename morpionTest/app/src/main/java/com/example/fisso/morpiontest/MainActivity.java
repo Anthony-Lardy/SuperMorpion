@@ -215,9 +215,10 @@ public class MainActivity extends AppCompatActivity {
                                 desactiverMatrice(liste);
                                 Matrice a = getMatriceClique(b);
                                 verificationVictoire(a);
-                                verificationVictoirePartie();
-                                changerJoueur();
-                                coupSuivant(b, a);
+                                if(verificationVictoirePartie() == 0) {
+                                    changerJoueur();
+                                    coupSuivant(b, a);
+                                }
                             }
                         });
                     }
@@ -281,7 +282,6 @@ public class MainActivity extends AppCompatActivity {
             });
             finPartie.setTitle("Victoire !!");
             finPartie.setIcon(joueurActuel.getFormeTrans());
-            changerJoueur();
             finPartie.setMessage(joueurActuel.getPseudo() + " a gagné !!");
             finPartie.show();
         }else if(typeFin == 0){
@@ -292,7 +292,6 @@ public class MainActivity extends AppCompatActivity {
             });
             finPartie.setTitle("Égalité !!");
             finPartie.setIcon(R.drawable.egalite);
-            changerJoueur();
             finPartie.show();
         }
 

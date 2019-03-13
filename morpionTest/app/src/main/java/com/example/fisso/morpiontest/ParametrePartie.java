@@ -17,8 +17,6 @@ public class ParametrePartie  extends AppCompatActivity {
     private EditText pseudo1;
     private EditText pseudo2;
     private Button valider;
-    private String name1;
-    private String name2;
     public SharedPreferences preferences;
 
     @Override
