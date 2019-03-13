@@ -1,5 +1,6 @@
 package com.example.fisso.morpiontest;
 
+import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -11,6 +12,8 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.plattysoft.leonids.ParticleSystem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
     ImageView [][] tableauImage = { {i1, i2, i3}, {i4, i5, i6},{ i7, i8, i9} };
     private Button rejouer;
     private ImageButton parametres;
+    private Activity a = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -291,26 +295,26 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void finPartieVictoire(int typeFin) {
+
+        android.app.AlertDialog finPartie = new android.app.AlertDialog.Builder(this).create();
+        finPartie.setButton(DialogInterface.BUTTON_POSITIVE, "oui", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+            }
+        });
         if(typeFin == 1){
-            android.app.AlertDialog finPartie = new android.app.AlertDialog.Builder(this).create();
-            finPartie.setButton(DialogInterface.BUTTON_POSITIVE, "oui", new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int which) {
-                }
-            });
             finPartie.setTitle("Victoire !!");
             finPartie.setIcon(joueurActuel.getFormeTrans());
             finPartie.setMessage(joueurActuel.getPseudo() + " a gagné !!");
-            finPartie.show();
+
+            new ParticleSystem(a, 1000, getDrawable(R.drawable.confetti), 1000)
+                    .setSpeedRange(0.2f, 0.5f)
+                    .oneShot(findViewById(R.id.fenetre), 100);
         }else if(typeFin == 0){
-            android.app.AlertDialog finPartie = new android.app.AlertDialog.Builder(this).create();
-            finPartie.setButton(DialogInterface.BUTTON_POSITIVE, "oui", new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int which) {
-                }
-            });
             finPartie.setTitle("Égalité !!");
             finPartie.setIcon(R.drawable.egalite);
             finPartie.show();
         }
+        finPartie.show();
     }
 
 
