@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     private List<Matrice> listeToutesMatrices = new ArrayList<Matrice>();
     private Musique musique;
     ImageView [][] tableauImage = { {i1, i2, i3}, {i4, i5, i6},{ i7, i8, i9} };
+    private Button rejouer;
 
 
     @Override
@@ -41,7 +43,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         fenetre = (RelativeLayout) findViewById(R.id.fenetre);
-
+        rejouer = (Button) findViewById(R.id.boutonRejouer);
+        rejouer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                rejouerPartie(listeToutesMatrices);
+            }
+        });
     }
 
     private void afficherGrille(Matrice[][] listeMatrice){
@@ -56,14 +64,6 @@ public class MainActivity extends AppCompatActivity {
             x = (width/22);
             y+= 7*(width/22);
         }
-
-
-
-
-
-
-
-
     }
 
     private void afficherGrandeGrille(){
@@ -99,30 +99,16 @@ public class MainActivity extends AppCompatActivity {
 
     }
     private void afficherMatrice(Matrice m1, float x, float yDepart){
-
-
         ImageButton [][] tableau = m1.getMatrice();
-
-
-
-
-
-
-
         for (int i=0;i<3;i++) {
-
                 //ecart vertical entre les imagesButton
-
             float xDepart = x;
-
                 for (int j = 0; j < 3; j++) {
                     //taille des imageButtons
                     ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(width / 11, width / 11);
                     tableau[i][j] = new ImageButton(this);
                     tableau[i][j].setLayoutParams(params);
                     tableau[i][j].setBackgroundResource(R.drawable.carreau);
-
-
                     tableau[i][j].setX(xDepart);
                     tableau[i][j].setY(yDepart);
                     fenetre.addView(tableau[i][j]);
@@ -166,8 +152,6 @@ public class MainActivity extends AppCompatActivity {
             j1 = new Joueur((String) getIntent().getSerializableExtra("pseudo1"), R.drawable.croix, R.drawable.croix_transp);
             j2 = new Joueur((String) getIntent().getSerializableExtra("pseudo2"), R.drawable.cercle, R.drawable.cercle_transp);
             joueurActuel = j1;
-
-
             jouerTourTexte = (TextView) findViewById(R.id.jouerTourTexte);
             pseudo1 = (TextView) findViewById(R.id.pseudo1);
             pseudo2 = (TextView) findViewById(R.id.pseudo2);
@@ -176,7 +160,6 @@ public class MainActivity extends AppCompatActivity {
             jouerTourTexte.setText("C'est au tour de "+ joueurActuel.getPseudo() + " de jouer");
             pseudo1.setText(j1.getPseudo());
             pseudo2.setText(j2.getPseudo());
-
             jouerUnePartie();
         }
 
@@ -196,8 +179,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void jouerUnePartie(){
         jouerUnCoup(listeToutesMatrices);
-
-
     }
 
 
@@ -206,7 +187,7 @@ public class MainActivity extends AppCompatActivity {
             m.activerMatrice();
                 for (int k = 0; k < 3; k++) {
                     for (int l = 0; l < 3; l++) {
-                        m.getMatrice()[k][l].setOnClickListener(new View.OnClickListener() {
+                        m.getMatrice()[k][l].setOnClickListener(new View.OnClickListener(){
                             @Override
                             public void onClick(View v) {
                                 ImageButton b = (ImageButton) v;
@@ -222,12 +203,10 @@ public class MainActivity extends AppCompatActivity {
                         });
                     }
                 }
-
             }
     }
 
     private Matrice verificationVictoire(Matrice a){
-
         if (a.verificationVictoire(joueurActuel) == 1) {
             a.getImage().setBackgroundResource(a.getForme());
             a.getImage().setVisibility(View.VISIBLE);
@@ -293,7 +272,6 @@ public class MainActivity extends AppCompatActivity {
             finPartie.setIcon(R.drawable.egalite);
             finPartie.show();
         }
-
     }
 
 
@@ -333,10 +311,6 @@ public class MainActivity extends AppCompatActivity {
         return m8;
     }
 
-
-
-
-
     private Matrice matriceSuivante(int i){
 
         switch (i) {
@@ -363,5 +337,11 @@ public class MainActivity extends AppCompatActivity {
         return null;
     }
 
+    private void rejouerPartie(List<Matrice> liste){
+        for (Matrice m : liste) {
+            m.reinitialiserMatrice();
+        }
+        jouerUnePartie();
+    }
 
 }

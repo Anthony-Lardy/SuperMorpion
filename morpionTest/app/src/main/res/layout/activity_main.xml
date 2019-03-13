@@ -5,9 +5,17 @@
     android:id="@+id/fenetre"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:background="@drawable/calepintest"
     tools:context="com.example.fisso.morpiontest.MainActivity">
 
+    <Button
+        android:id="@+id/boutonRejouer"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:text="Rejouer"
+        />
 
     <TextView
         android:text=""

@@ -19,7 +19,6 @@ public class Matrice {
     private ImageButton[][] tableau= { {a1, a2, a3}, {b1, b2, b3},{ c1, c2, c3} };
 
 
-
     public Matrice () {
         this.estFinie = false;
         this.image = null;
@@ -104,6 +103,17 @@ public class Matrice {
                 if(tableau[i][j].getTag()==null) {
                     tableau[i][j].setBackgroundResource(R.drawable.carreau);
                 }
+            }
+        }
+    }
+
+    public void reinitialiserMatrice(){
+        this.estFinie = false;
+        this.forme = 0;
+        this.image.setVisibility(View.GONE);
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                tableau[i][j].setTag(null);
             }
         }
     }
