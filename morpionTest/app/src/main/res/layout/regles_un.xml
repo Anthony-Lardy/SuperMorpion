@@ -17,7 +17,7 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="40dp"
-            android:text="But du jeu  :"
+            android:text="@string/but"
             android:textSize="18dp"/>
 
         <TextView
@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_marginTop="80dp"
-            android:text="Pour gagner la partie il suffit de gagner trois morpions alignés."
+            android:text="@string/regles1"
             android:textSize="14dp"/>
 
         <TextView
@@ -33,9 +33,9 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_marginTop="165dp"
-            android:text="Cette exemple ci-dessous montre la victoire du joueur vert :"
-            android:textSize="14dp"
-            android:id="@+id/textView5"/>
+            android:id="@+id/textView5"
+            android:text="@string/regles2"
+            android:textSize="14dp"/>
 
         <ImageView
 

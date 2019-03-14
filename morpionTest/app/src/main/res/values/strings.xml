@@ -1,3 +1,24 @@
 <resources>
-    <string name="app_name">morpionTest</string>
+    <string name="app_name">SuperMorpion</string>
+    <string name="jouer">Jouer</string>
+    <string name="regles">Règles</string>
+    <string name="credits">Crédits</string>
+    <string name="parametre">Paramètres de la partie</string>
+    <string name="pseudo2">Pseudo du joueur 2</string>
+    <string name="pseudo1">Pseudo du joueur 1</string>
+    <string name="rejouer">Rejouer</string>
+    <string name="valider">Valider</string>
+    <string name="creditsTitre">Crédits</string>
+    <string name="textCredits1">Ce projet est réalisé dans le cadre du module Programmation d\'Interfaces Embarquées de la formation du Master 1 Informatique de l\’Université du Mans sous la tutelle de Valérie Renault ainsi que Frédéric Lagrange.</string>
+    <string name="textCredits2">Les objectifs de ce module sont d\'acquérir les fondamentaux de la programmation d\'interfaces graphiques mobiles et les fondamentaux du développement sous Android.</string>
+    <string name="textCredits3">Cette application a été créée par deux étudiants : Dylan Fisson et Lardy Anthony</string>
+    <string name="but">But du jeu  :</string>
+    <string name="regles1">Pour gagner la partie il suffit de gagner trois morpions alignés.</string>
+    <string name="regles2">Cette exemple ci-dessous montre la victoire du joueur vert :</string>
+    <string name="reglesTitre2">Gagner un morpion :</string>
+    <string name="regles3">Afin de gagner le grand morpion il faut gagner des petits morpions. \nPour cela ce sont les règles du morpion classique. Il suffit d\'être le premier à aligner ses 3 points dans un morpion.</string>
+    <string name="regles4">Sur l\'exemple ci-dessous c\'est au tour des croix vertes de jouer dans le morpion au centre. \nSi le joueur joue en bas à droite il gagne alors le morpion.</string>
+    <string name="reglesTitre3">Règles particulières :</string>
+    <string name="regles5">Attention !! \nVous ne pouvez pas jouer où vous le voulez. Un petit morpion correspond au grand morpion. </string>
+    <string name="regles6">Sur l\'exemple ci-dessous le joueur possédant les croix vertes a jouer en haut à droite du morpion central. \nLe joueur suivant devra donc jouer dans le morpion en haut à droite. Si le morpion en haut à droite a déjà été fini le joueur suivant pourra jouer où il veut !</string>
 </resources>

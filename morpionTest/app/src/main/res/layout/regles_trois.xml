@@ -17,7 +17,7 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="40dp"
-            android:text="Règles particulières :"
+            android:text="@string/reglesTitre3"
             android:textSize="18dp"/>
 
 
@@ -28,18 +28,18 @@
             android:layout_alignParentTop="true"
             android:layout_centerVertical="true"
             android:layout_marginTop="80dp"
-            android:text="Attention !! \nVous ne pouvez pas jouer où vous le voulez. Un petit morpion correspond au grand morpion. "
+            android:text="@string/regles5"
             android:textSize="14dp"
             android:id="@+id/textView3" />
 
         <TextView
-            android:text="Sur l'exemple ci-dessous le joueur possédant les croix vertes a jouer en haut à droite du morpion central. \nLe joueur suivant devra donc jouer dans le morpion en haut à droite."
+            android:text="@string/regles6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView3"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_marginTop="45dp"
+            android:layout_marginTop="20dp"
             android:textSize="14dp"
             android:id="@+id/textView4" />
 

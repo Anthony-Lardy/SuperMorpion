@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">SuperMorpion</string>
+    <string name="jouer">Play</string>
+    <string name="regles">Rules</string>
+    <string name="credits">Credits</string>
+    <string name="parametre">Game\'s parameters</string>
+    <string name="pseudo2">Player\'s name 2</string>
+    <string name="pseudo1">Player\'s name 1</string>
+    <string name="valider">Validate</string>
+    <string name="rejouer">Replay</string>
+    <string name="creditsTitre">Credits</string>
+    <string name="textCredits1">This project is carried out as part of the Embedded Interfaces Programming module of the Master 1 in Computer Science at the University of Le Mans under the supervision of Valérie Renault and Frédéric Lagrange.</string>
+    <string name="textCredits2">The aims of this modules are to acquire the fundamentals of mobile graphical progaming and the fundamentals of Android development.</string>
+    <string name="textCredits3">This app was created by two students: Dylan Fisson and Lardy Anthony.</string>
+    <string name="but">Goal of the game :</string>
+    <string name="regles1">To win the game you just have to have three lined symbols.</string>
+    <string name="regles2">This example below shows the green player\'s victory:</string>
+    <string name="reglesTitre2">Win a morpion:</string>
+    <string name="regles3">In order to win the big morpion you have to win little morpions.\nThere are the rules of the classic morpion. You need to be the first the have your three lined symbols</string>
+    <string name="regles4">In the example below it is the turn of the green crosses to play in the morpion in the center. \n If the player plays on the bottom right he wins the game.</string>
+    <string name="reglesTitre3">Specific rules :</string>
+    <string name="regles5">Warning !! \n You can\'t play where you want. A small morpion corresponds to the big morpion.</string>
+    <string name="regles6">In the example below, the player with the green crosses to play on the top right of the central morpion. \n The next player will have to play in the top right morpion. \n If the top right morpion has been finished the next player will be able to play where he wants</string>
+</resources>
