@@ -1,9 +1,10 @@
-package com.example.fisso.morpiontest;
+package com.example.fisso.morpiontest.view;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.widget.ImageView;
+
 
 
 public class SamplePagerAdapter extends FragmentPagerAdapter {

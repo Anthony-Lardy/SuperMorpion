@@ -1,8 +1,10 @@
-package com.example.fisso.morpiontest;
+package com.example.fisso.morpiontest.model;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
+import com.example.fisso.morpiontest.R;
+import com.example.fisso.morpiontest.model.Joueur;
 
 
 public class Matrice {

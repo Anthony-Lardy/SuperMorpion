@@ -1,10 +1,10 @@
-package com.example.fisso.morpiontest;
+package com.example.fisso.morpiontest.view;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.ImageButton;
+
+import com.example.fisso.morpiontest.R;
 
 
 public class Credits  extends AppCompatActivity {

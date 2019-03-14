@@ -1,4 +1,4 @@
-package com.example.fisso.morpiontest;
+package com.example.fisso.morpiontest.model;
 
 
 /**

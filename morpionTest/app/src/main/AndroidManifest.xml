@@ -8,19 +8,19 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="MainActivity"
+        <activity android:name=".controller.MainActivity"
             android:screenOrientation="portrait"/>
         <activity
-            android:name="ParametrePartie"
+            android:name=".view.ParametrePartie"
             android:screenOrientation="portrait" />
         <activity
-            android:name="Credits"
+            android:name=".view.Credits"
             android:screenOrientation="portrait" />
         <activity
-            android:name="Regles"
+            android:name=".view.Regles"
             android:screenOrientation="portrait" />
         <activity
-            android:name="Accueil"
+            android:name=".view.Accueil"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

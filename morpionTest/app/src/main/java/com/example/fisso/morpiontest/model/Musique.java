@@ -1,8 +1,9 @@
-package com.example.fisso.morpiontest;
+package com.example.fisso.morpiontest.model;
 
 import android.content.Context;
 import android.media.MediaPlayer;
 
+import com.example.fisso.morpiontest.R;
 
 
 public class Musique{

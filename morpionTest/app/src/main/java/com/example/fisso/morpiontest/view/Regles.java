@@ -1,10 +1,12 @@
-package com.example.fisso.morpiontest;
+package com.example.fisso.morpiontest.view;
 
 
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
+
+import com.example.fisso.morpiontest.R;
 
 
 public class Regles extends AppCompatActivity {

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/calepintest"
-    tools:context="com.example.fisso.morpiontest.MainActivity">
+    tools:context="com.example.fisso.morpiontest.controller.MainActivity">
 
     <Button
         android:id="@+id/boutonRejouer"

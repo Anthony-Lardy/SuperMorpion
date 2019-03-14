@@ -1,6 +1,5 @@
-package com.example.fisso.morpiontest;
+package com.example.fisso.morpiontest.controller;
 
-import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -13,6 +12,11 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.example.fisso.morpiontest.model.Musique;
+import com.example.fisso.morpiontest.R;
+import com.example.fisso.morpiontest.model.Joueur;
+import com.example.fisso.morpiontest.model.Matrice;
+import com.example.fisso.morpiontest.view.Accueil;
 import com.plattysoft.leonids.ParticleSystem;
 
 import java.util.ArrayList;

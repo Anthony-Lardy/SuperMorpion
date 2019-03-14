@@ -1,7 +1,5 @@
-package com.example.fisso.morpiontest;
+package com.example.fisso.morpiontest.view;
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -9,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import com.plattysoft.leonids.ParticleSystem;
+import com.example.fisso.morpiontest.R;
 
 public class Accueil extends AppCompatActivity {
 
