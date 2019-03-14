@@ -41,11 +41,12 @@
             android:layout_height="200dp"
             android:src="@drawable/victoirecase"
             android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
             android:layout_marginRight="66dp"
             android:layout_marginEnd="66dp"
-            android:layout_marginBottom="37dp" />
+            android:layout_marginBottom="37dp"
+            android:layout_below="@+id/textView3"
+            android:layout_centerHorizontal="true"/>
 
         <TextView
             android:text="Sur l'exemple ci-dessous c'est au tour des croix vertes de jouer dans le morpion au centre. \nSi le joueur joue en bas à droite il gagne alors le morpion."

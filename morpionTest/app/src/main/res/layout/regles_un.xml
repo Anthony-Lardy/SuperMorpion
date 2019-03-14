@@ -34,7 +34,8 @@
             android:layout_alignParentTop="true"
             android:layout_marginTop="165dp"
             android:text="Cette exemple ci-dessous montre la victoire du joueur vert :"
-            android:textSize="14dp"/>
+            android:textSize="14dp"
+            android:id="@+id/textView5"/>
 
         <ImageView
 
@@ -42,11 +43,12 @@
             android:layout_height="200dp"
             android:src="@drawable/victoire"
             android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
             android:layout_marginRight="66dp"
             android:layout_marginEnd="66dp"
-            android:layout_marginBottom="37dp" />
+            android:layout_marginBottom="37dp"
+            android:layout_below="@+id/textView5"
+            android:layout_centerHorizontal="true"/>
 
 
     </RelativeLayout>

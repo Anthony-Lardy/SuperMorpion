@@ -3,22 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/calepintest">
 
-
-    <ImageButton
-        android:id="@+id/boutonAccueil"
-        android:layout_width="60dp"
-        android:layout_height="50dp"
-        android:layout_alignParentTop="true"
-        android:scaleType="fitXY"
-        android:src="@drawable/retour" />
 
     <TextView
         android:id="@+id/creditsTitre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/boutonAccueil"
         android:layout_centerHorizontal="true"
         android:text="Crédits:"
         android:textSize="30dp" />
@@ -48,13 +40,13 @@
     <TextView
         android:id="@+id/texteCredits3"
         android:layout_width="wrap_content"
-        android:layout_below="@+id/texteCredits2"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_marginStart="19dp"
         android:layout_marginLeft="19dp"
         android:text="Cette application a été créée par deux étudiants : Dylan Fisson et Lardy Anthony"
-        android:textSize="18dp" />
+        android:textSize="18dp"
+        android:layout_below="@+id/texteCredits2"/>
 
     <ImageView
         android:id="@+id/logoic2"

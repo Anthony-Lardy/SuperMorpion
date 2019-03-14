@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/calepintest">
 
     <TextView
         android:text="Paramètres de la partie"
@@ -43,7 +44,7 @@
         android:id="@+id/pseudo2"
         android:layout_below="@+id/joueur1Pseudo"
         android:layout_alignStart="@+id/joueur1Pseudo"
-        android:layout_marginTop="18dp" />
+        android:layout_marginTop="26dp" />
 
     <EditText
         android:layout_width="wrap_content"
