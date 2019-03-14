@@ -205,7 +205,6 @@ public class MainActivity extends AppCompatActivity {
             pseudo2.setText(j2.getPseudo());
             jouerUnePartie();
         }
-
     }
 
     private void changerJoueur(){

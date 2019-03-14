@@ -27,14 +27,6 @@
         android:layout_marginTop="70dp"
         android:id="@+id/pseudo1" />
 
-    <TextView
-        android:text=""
-        android:layout_marginTop="50dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/pseudo1"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/jouerTourTexte" />
 
     <TextView
         android:text=""
@@ -45,12 +37,24 @@
         android:layout_marginEnd="14dp"
         android:id="@+id/pseudo2" />
 
+    <TextView
+        android:text=""
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/pseudo1"
+        android:layout_below="@+id/pseudo1"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/jouerTourTexte" />
+
+
     <ImageView
         android:layout_width="45dp"
         android:layout_height="45dp"
         android:id="@+id/tourJouerImage"
         android:layout_marginTop="22dp"
-        android:layout_below="@+id/jouerTourTexte"
+        android:layout_below="@+id/pseudo1"
+        android:layout_toRightOf="@id/jouerTourTexte"
         android:layout_centerHorizontal="true" />
 
 
