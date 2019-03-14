@@ -14,7 +14,7 @@
         android:layout_height="50dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
-        android:text="Rejouer"
+        android:text="@string/rejouer"
         />
 
     <TextView

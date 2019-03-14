@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/boutonAccueil"
         android:layout_centerHorizontal="true"
-        android:text="Crédits:"
+        android:text="@string/creditsTitre"
         android:textSize="30dp" />
 
     <TextView
@@ -31,7 +31,7 @@
         android:layout_alignParentLeft="true"
         android:layout_marginStart="19dp"
         android:layout_marginLeft="19dp"
-        android:text="Ce projet est réalisé dans le cadre du module Programmation d'Interfaces Embarquées de la formation du Master 1 Informatique de l’Université du Mans sous la tutelle de Valérie Renault ainsi que Frédéric Lagrange."
+        android:text="@string/textCredits1"
         android:textSize="18dp" />
 
     <TextView
@@ -42,7 +42,7 @@
     android:layout_alignParentLeft="true"
     android:layout_marginStart="19dp"
     android:layout_marginLeft="19dp"
-    android:text="Les objectifs de ce module sont d'acquérir les fondamentaux de la programmation d'interfaces graphiques mobiles et les fondamentaux du développement sous Android."
+    android:text="@string/textCredits2"
     android:textSize="18dp" />
 
     <TextView
@@ -53,7 +53,7 @@
         android:layout_alignParentLeft="true"
         android:layout_marginStart="19dp"
         android:layout_marginLeft="19dp"
-        android:text="Cette application a été créée par deux étudiants : Dylan Fisson et Lardy Anthony"
+        android:text="@string/textCredits3"
         android:textSize="18dp" />
 
     <ImageView
